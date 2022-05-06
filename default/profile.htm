@@ -1,0 +1,178 @@
+<!doctype html public "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+
+<html>
+<head>
+  <title>variable:document.title</title>
+  variable:document.keywords
+  variable:document.description
+  <meta http-equiv="content-type" content='text/html; charset=utf-8'>
+  <link rel='stylesheet' type='text/css' href='default/style.css' />
+</head>
+<body>
+
+<div class='container'>
+<div id='output'>
+
+<div class='window' style='margin: 0px auto 20px auto;'>
+
+<div style='overflow: auto;'>
+  <a href='index.php'><img src='default/logo.png'></a>
+</div>
+
+</div>
+
+<style>
+
+.contact\.smbanner {
+  background-color: #dddddd;
+  border: 1px solid #666666;
+  font-size: 14px;
+  font-weight: bold;
+  height: 188px;
+  margin: 0px auto 15px auto;
+  text-align: center;
+  width: 600px;
+}
+
+</style>
+<div class='window'>
+<div class='windowheader'>
+  Profile <img src='lib/libtheme/default/widget/marker-white.png' />
+  variable:contact.fullname
+</div>
+<div class='windowbody' style='padding: 0px 30px 0px 30px;'>
+
+<div class='controlpanel'>
+
+  <a href='contact.php?id=variable:client.id'>
+    <img src='default/16/people.png'/>&nbsp;variable:client.fullname</a>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href='login.php?o=logout'><img src='default/16/logout.png'/>&nbsp;Logout</a>
+
+</div><!-- /controlpanel -->
+
+variable:messagebox
+
+<form action='profile.php?id=variable:contact.id' method='post' enctype='multipart/form-data' accept-charset='utf-8'>
+<input name='o' type='hidden' value='modify' />
+<input name='seed' type='hidden' value='variable:s' />
+
+<input name='MAX_FILE_SIZE' type='hidden' value='10000000' />
+
+<div class='cat'><div class='caption'>Personal Information</div></div>
+
+<div class='cat'>
+  <div class='cattitle'>Birthday</div>
+  <div class='catdesc'>Enter your birth day, month and year, for example 10/07/1982.</div>
+</div>
+
+<div class='subcat'>
+  <div class='subcatlpan'>Birthday</div>
+  <div class='subcatrpan'>
+    <input name='birthday' type='text' value='variable:contact.birthday' class='textfield'>
+  </div>
+</div>
+
+<div class='cat'><div class='caption'>Location</div></div>
+
+<div class='cat'>
+  <div class='cattitle'>Current Residence</div>
+  <div class='catdesc'>Enter the name of the city and state currently residing in.</div>
+</div>
+
+<div class='subcat'>
+  <div class='subcatlpan'>City</div>
+  <div class='subcatrpan'>
+    <input name='current_city' type='text' value='variable:contact.current_city' class='textfield'>
+  </div>
+</div>
+
+<div class='subcat'>
+  <div class='subcatlpan'>State</div>
+  <div class='subcatrpan'>
+    <input name='current_state' type='text' value='variable:contact.current_state' class='textfield'>
+  </div>
+</div>
+
+<div class='cat'><div class='caption'>Company</div></div>
+
+<div class='cat'>
+  <div class='cattitle'>Company</div>
+  <div class='catdesc'>Enter the name of the company and position (if applicable).</div>
+</div>
+
+<div class='subcat'>
+  <div class='subcatlpan'>Company</div>
+  <div class='subcatrpan'>
+    <input name='employer' type='text' value='variable:contact.employer' class='textfield'>
+  </div>
+</div>
+
+<div class='subcat'>
+  <div class='subcatlpan'>Position</div>
+  <div class='subcatrpan'>
+    <input name='position' type='text' value='variable:contact.position' class='textfield'>
+  </div>
+</div>
+
+<div class='cat'><div class='caption'>Education</div></div>
+
+<div class='subcat'>
+  <div class='subcatlpan'>High School</div>
+    <div class='subcatrpan'>
+    <input name='highschool' type='text' value='variable:contact.highschool' class='textfield'>
+  </div>
+</div>
+
+<div class='cat'>
+  <div class='cattitle'>College</div>
+    <div class='catdesc'>Enter the name of the college, major, and degree (if applicable).</div>
+</div>
+
+<div class='subcat'>
+  <div class='subcatlpan'>College</div>
+  <div class='subcatrpan'>
+    <input name='college' type='text' value='variable:contact.college' class='textfield'>
+  </div>
+</div>
+
+<div class='subcat'>
+  <div class='subcatlpan'>Major</div>
+  <div class='subcatrpan'>
+    <input name='major' type='text' value='variable:contact.major' class='textfield'>
+  </div>
+</div>
+
+<div class='subcat'>
+  <div class='subcatlpan'>Degree</div>
+  <div class='subcatrpan'>
+    <input name='degree' type='text' value='variable:contact.degree' class='textfield'>
+  </div>
+</div>
+
+<div class='cat'><div class='caption'>Profile Banner</div></div>
+
+<div class='cat' style='text-align: center;'>variable:contact.banner</div>
+
+<div class='subcat'>
+  <div class='subcatrpan'>
+    <div style='padding-bottom: 6px;'>Select a 800x250 sized image to upload.</div>
+    <input name='banner' type='file' />
+  </div>
+</div>
+
+<div class='cattoolb'><input type='submit' value='Update Profile' class='smallsubmit'/></div>
+<div class='catfooter'><a href='contact.php?id=variable:contact.id'>Go back to dashboard</a></div> 
+</form>
+</div>
+
+<div class='windowfooter'>&nbsp;</div>
+</div>
+
+</div>
+</div><!-- /container -->
+
+</body>
+</html>

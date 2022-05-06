@@ -1,0 +1,143 @@
+<!-- **************************************************
+     * Application: EnigmaV                           * 
+     * Author: Johnny L. de Alba                      *
+     * Date: 09/11/2013                               *
+     ************************************************** -->
+
+<!doctype html public "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+
+<html>
+<head>
+  <title>variable:document.title</title>
+  <meta http-equiv="content-type" content='text/html; charset=utf-8'>
+  <link rel='stylesheet' type='text/css' href='default/style-n.css' />
+  <link rel='stylesheet' type='text/css' href='default/default.css' />
+</head>
+<body>
+
+<div class='container'>
+
+  <a href='index.php'><img src='default/logo.png'></a>
+
+<div class='window'>
+<div class='window.header'>Account Settings</div>
+<div class='window.body'>
+
+<div class='category' id='prompt'>
+
+  variable:dialog_box
+
+  <img src='variable:client.avatar' class='component.avatar32' alt='' />
+  <div class='component.fullname'>variable:client.fullname</div>
+  
+</div>
+
+<form action='account.php?id=variable:contact.id' method='post'  enctype='multipart/form-data' accept-charset='utf-8'>
+  <input name='o' type='hidden' value='modify' />
+  <input name='s' type='hidden' value='variable:s' />
+  <input name='MAX_FILE_SIZE' type='hidden' value='300000' />
+
+<div class='category'>
+  <div class='category.title'>Username</div>
+  <div class='category.description'>Username's cannot be more than 16 characters in length.</div>
+</div>
+
+<div class='sub_category'>
+  <div class='sub_category.title'>Username</div>
+  <div class='sub_category.field'>
+    <input name='fullname' type='text' maxlength='64' value='variable:contact.fullname' class='category.input'>
+  </div>
+</div>
+
+<div class='category'>
+  <div class='category.caption'>Login Details</div>
+  <div class='category.title'>Email</div>
+  <div class='category.description'>Enter a valid email address, for example: email@domain.com.</div>
+</div>
+
+<div class='sub_category'>
+  <div class='sub_category.title'>Email</div>
+  <div class='sub_category.field'>
+    <input name='email' type='text' maxlength='64' value='variable:contact.email' class='category.input'>
+  </div>
+</div>
+
+<div class='category'>
+  <div class='category.caption'>Password</div>
+  <div class='category.description'>Enter a password between 6-16 characters.</div>
+</div>
+
+<div class='sub_category'>
+  <div class='sub_category.title'>Current Password</div>
+  <div class='sub_category.field'>
+    <input name='current_password' type='password' maxlength='64' class='category.input'>
+  </div>
+</div>
+
+<div class='sub_category'>
+  <div class='sub_category.title'>New Password</div>
+  <div class='sub_category.field'>
+    <input name='new_password' type='password' maxlength='64' class='category.input'>
+  </div>
+</div>
+
+<div class='sub_category'>
+  <div class='sub_category.title'>Verify Password</div>
+  <div class='sub_category.field'>
+    <input name='verify_password' type='password' maxlength='64' class='category.input'>
+  </div>
+</div>
+
+<div class='category'>
+  <div class='category.caption'>Privacy Settings</div>
+  <div class='category.title'>Privacy</div>
+  <div class='category.description'>Set the privacy settings for this contact, select who can view and create messages.</div>
+</div>
+
+<div class='sub_category'>
+  <div class='sub_category.title'>Permissions</div>
+  <div class='sub_category.field'>
+		Hidden <input name='hidden' type='checkbox' value='TRUE' variable:contact.hidden> &nbsp;&nbsp;
+		Locked <input name='locked' type='checkbox' value='TRUE' variable:contact.locked>
+  </div>
+</div>
+
+<div class='category'>
+  <div class='category.caption'>Profile Image</div>
+</div>
+
+<div class='sub_category'>
+  <div style='float: left;'>
+
+	<img src='variable:contact.avatar' class='contact.icon64' />
+	  
+	class:contact.remove_avatar
+	<div class='sub_category.center'>
+      <a href='account.php?id=variable:contact.id&o=remove-avatar&s=variable:s'>
+	    Remove Icon</a>
+    </div>
+	;class:contact.remove_avatar
+
+  </div>
+	
+  <div class='sub_category.field'>
+    <div style='padding-bottom: 6px;'>Select a 128x128 sized image to upload.</div>
+      <input name='avatar' type='file' />
+  </div>
+  
+</div>
+
+<div class='category.footer'><input type='submit' value='Update Account' class='white_control.button'/></div>
+<div class='category.footer'><a href='index.php'>Return to Index</a></div> 
+</form>
+</div>
+
+<div class='window.footer'>&nbsp;</div>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

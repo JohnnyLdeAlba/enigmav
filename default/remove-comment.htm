@@ -1,0 +1,65 @@
+<!-- **************************************************
+     * Application: EnigmaV                           * 
+     * Author: Johnny L. de Alba                      *
+     * Date: 09/14/2013                               *
+     ************************************************** -->
+
+<!doctype html public "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+
+<html>
+<head>
+  <title>EnigmaV Network - Remove Comment</title>
+  <meta http-equiv="content-type" content='text/html; charset=utf-8'>
+  <link rel='stylesheet' type='text/css' href='default/style-n.css' />
+  <link rel='stylesheet' type='text/css' href='default/default.css' />
+  <link rel='stylesheet' type='text/css' href='default/view-message.css' />
+</head>
+<body>
+
+<div class='container'>
+
+<a href='index.php'><img src='default/logo.png'></a>
+
+<div class='window'>
+  <div class='window.header'>Remove Comment</div>
+<div class='window.body'>
+
+<form action='remove-comment.php?id=variable:comment.id' method='post' enctype='multipart/form-data' accept-charset='utf-8'>
+<input name='o' type='hidden' value='remove' />
+<input name='s' type='hidden' value='variable:s' />
+
+<div class='category' style='margin-bottom: 0px;'>
+
+  <div class='dialog_notice'>
+    <img src='default/32/important.png' class='dialog_box.icon' />
+	Are you sure you want to remove this comment?
+  </div>
+
+  <img src='variable:comment.avatar' class='comment.avatar64' alt='' />
+  
+<div class='comment.body'>
+
+  <div class='comment.red_author'>
+    <a href='contact.php?id=variable:comment.uid'>
+	  variable:comment.fullname</a>
+  </div>
+  
+  <div class='comment.date'>variable:comment.created</div>
+  variable:comment.data
+  
+</div>
+</div>
+
+<div class='category.footer'><input type='submit' value='Remove Comment' class='white_control.button'/></div>
+<div class='category.footer'><a href='index.php'>Return to Index</a></div> 
+</form>
+</div>
+
+<div class='window.footer'>&nbsp;</div>
+</div>
+
+</div>
+
+</body>
+</html>

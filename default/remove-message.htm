@@ -1,0 +1,110 @@
+<!-- **************************************************
+     * Application: EnigmaV                           * 
+     * Author: Johnny L. de Alba                      *
+     * Date: 09/14/2013                               *
+     ************************************************** -->
+
+<!doctype html public "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+
+<html>
+<head>
+  <title>EnigmaV Network - Remove Message</title>
+  <meta http-equiv="content-type" content='text/html; charset=utf-8'>
+  <link rel='stylesheet' type='text/css' href='default/style-n.css' />
+  <link rel='stylesheet' type='text/css' href='default/default.css' />
+  <link rel='stylesheet' type='text/css' href='default/view-directory.css' />
+</head>
+<body>
+
+<div class='container'>
+
+<a href='index.php'><img src='default/logo.png'></a>
+
+<div class='window'>
+  <div class='window.header'>Remove Message</div>
+<div class='window.body'>
+
+<form action='remove-message.php?id=variable:message.id' method='post' enctype='multipart/form-data' accept-charset='utf-8'>
+<input name='o' type='hidden' value='remove' />
+<input name='s' type='hidden' value='variable:s' />
+
+<div class='category'>
+
+  <div class='dialog_notice'>
+    <img src='default/32/important.png' class='dialog_box.icon' />
+	Are you sure you want to remove this message?
+  </div>
+
+<div class='component' style='margin: 0px auto 0px auto;'>
+<div class='component.header'>
+  <div style='float: right;'>
+    <a href='view-message.php?id=variable:message.id'>
+	  variable:message.total Comments</a>
+  </div>
+  
+  <a href='view-directory.php?id=variable:message.directory_id'>
+    variable:message.directory_label</a>
+</div>
+
+<div class='component.body'>
+
+class:message.image
+  <a href='message/variable:message.pattachment'>
+  <img src='message/highlight/variable:message.pattachment'
+    class='message.highlight' alt='' /></a>
+;class:message.image
+
+class:message.utube
+<div style='text-align: center;'>
+  <object type='application/x-shockwave-flash' data='http://www.youtube.com/v/variable:message.pattachment' class='message.utube'>
+    <param name='movie' value='http://www.youtube.com/v/variable:message.pattachment' />
+    <param name='movie' allowFullScreen='true' />
+    <param name='movie' allowscriptaccess='always' />
+  </object>
+</div>
+;class:message.utube
+
+<div class='message.rating'>
+  <a href='view-message.php?id=variable:message.id&o=increment&s=variable:s'>
+    <img src='default/grey-vote-up.png' title='Up Vote'/></a>
+
+  <div style='margin: 15px 0px 15px 0px;'>
+    variable:message.rating</div>
+  
+  <a href='view-message.php?id=variable:message.id&o=decrement&s=variable:s'>
+    <img src='default/grey-vote-down.png' title='Down Vote'/></a>
+</div>
+
+<img src='variable:message.avatar' class='message.avatar32' alt='' />
+
+<div class='message.caption'>
+  <div class='message.title'>variable:message.title</div>
+  <div class='message.date'>On variable:message.created</div>
+</div>
+  <div class='message.body'>variable:message.data</div>
+</div>
+
+<div class='component.footer'>
+<div style='float: left;'>
+  <a href='contact.php?id=variable:message.uid'>
+    by variable:message.fullname</a>
+</div>
+  <a href='view-message.php?id=variable:message.id'>read more...</a>
+</div>
+</div>
+
+</div>
+
+<div class='category.footer'><input type='submit' value='Remove Message' class='white_control.button'/></div>
+<div class='category.footer'><a href='index.php'>Return to Index</a></div> 
+</form>
+</div>
+
+<div class='window.footer'>&nbsp;</div>
+</div>
+
+</div>
+
+</body>
+</html>

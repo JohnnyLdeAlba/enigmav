@@ -1,0 +1,281 @@
+/**************************************************
+ * Application: EnigmaV                           *
+ * Author: Johnny L. de Alba                      *
+ * Date: 09/08/2013                               *
+ **************************************************/
+
+body, html { height: 100%; }
+  
+body {
+  background: #9999aa;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 14px;
+  margin: 0px; }
+
+* { margin: 0px; padding: 0px; }
+a:link, a:visited, a:active { color: #ffffff; text-decoration: none; }
+
+img { border: 0px none transparent; }
+p { margin-bottom: 20px; }
+
+textarea, .textfield {
+  border: 1px solid #bbbbcc;
+  border-radius: 3px;
+  font-family: sans-serif;
+  font-size: 11px;
+  margin: 0px;
+  padding: 2px; }
+
+textarea { resize: vertical; }
+  
+.s1 { font-size: 14px; }
+.s2 { font-size: 12px; }
+.s3 { font-size: 11px; }
+.s4 { font-size: 10px; }
+
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.bitalic { font-style: italic; font-weight: bold; }
+.underline { text-decoration: underline; }
+
+.dialog_component {
+  background-color: #ddddee;
+  border: 1px solid #bbbbcc;
+  border-radius: 3px;
+  color: #444455;
+  font-weight: bold;
+  height: 50px;
+  margin-bottom: 20px;
+  padding-top: 30px;
+  overflow: auto;
+  text-align: center; }
+
+.dialog_notice,
+.dialog_warning {
+
+  background-color: #ddddff;
+  border: 2px solid #66aadd;
+  color: #4488bb;
+  margin-bottom: 20px;
+  overflow: auto;
+  padding: 10px; }
+
+.dialog_warning {
+
+  background-color: #ffdddd;
+  border: 2px solid #dd6666;
+  color: #bb4444; }
+  
+.dialog_box\.icon {
+
+  float: left;
+  margin: 5px 15px 5px 5px; }
+
+.gridlayout {
+  margin: 0px auto 20px auto;
+  overflow: auto;
+  width: 760px; }
+
+.gridlayout\.column {
+  float: left;
+  margin: 0px 10px 20px 10px;
+  overflow: auto;
+  width: 230px; }
+  
+.divider {
+  border: 1px solid #cccccc;
+  border-width: 1px 0px 0px 0px;
+  height: 20px;
+  margin-top: 20px; }
+
+.account_settings {
+  margin: 20px 20px 0px 168px;
+  overflow: auto; }
+  
+.grey_control\.left a:link,
+.grey_control\.left a:visited,
+.grey_control\.left a:active,
+.grey_control\.right a:link, 
+.grey_control\.right a:visited, 
+.grey_control\.right a:active,
+.grey_control\.middle a:link,
+.grey_control\.middle a:visited,
+.grey_control\.middle a:active {
+  color: #aaaaaa; }
+  
+.grey_control\.left,
+.grey_control\.right,
+.grey_control\.middle {
+  background-image: url('controlpanel.png');
+  background-repeat: repeat-x;
+  border: 1px solid #000000;
+  border-radius: 4px 0px 0px 4px;
+  color: #aaaaaa;
+  float: right;
+  font-size: 11px;
+  padding: 10px; }
+
+.grey_control\.right {
+  border-color: #000000 #000000 #000000 #666677;
+  border-radius: 0px 4px 4px 0px; }
+
+.grey_control\.middle {
+  border-color: #000000 #000000 #000000 #666677;
+  border-radius: 0px 0px 0px 0px; }
+
+.white_control\.button a:link,
+.white_control\.button a:visited,
+.white_control\.button a:active,
+
+.white_control\.left a:link,
+.white_control\.left a:visited,
+.white_control\.left a:active,
+.white_control\.right a:link, 
+.white_control\.right a:visited, 
+.white_control\.right a:active  {
+  color: #444444; }
+
+.white_control\.button,
+.white_control\.left, 
+.white_control\.right {
+
+  background-image: url('button.png');
+  background-repeat: repeat-x;
+  border: 1px solid #666677;
+  border-radius: 4px;
+  color: #444455;
+  float: right;
+  font-size: 11px;
+  margin-right: 8px;
+  padding: 4px 8px 4px 8px; }
+ 
+.white_control\.left {
+
+  border-radius: 4px 0px 0px 4px;
+  margin-right: 0px; }
+
+.white_control\.right {
+
+  border-color: #666677 #666677 #666677 #aaaa77;
+  border-width: 1px 1px 1px 0px;
+  border-radius: 0px 4px 4px 0px; }
+  
+.background {
+  background-repeat: no-repeat;
+  min-height: 100%;
+  overflow: auto; }
+
+.container {
+  margin: 20px auto 20px auto;
+  overflow: auto;
+  padding: 0px;
+  width: 800px; }
+
+.primary_heading {
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin: 5px 20px 0px 0px;
+  overflow: auto;
+  text-align: right;
+  text-transform: uppercase; } 
+  
+.document {
+  background-color: #555566;
+  overflow: auto; }
+
+.document\.category {
+  background-color: #ddddee;
+  color: #444444;
+  margin: 20px 0px 20px 0px;
+  padding: 20px 20px 0px 20px; 
+  overflow: auto; }
+  
+.document\.footer {
+  margin: 0px auto 20px auto;
+  overflow: auto;
+  width: 760px; }
+  
+.contact\.icon64 {
+  display: block;
+  height: 64px;
+  margin: 0px auto 10px auto;
+  width: 64px; }
+  
+.directory\.caption {
+  height: 224px;
+  margin-bottom: 4px;
+  overflow: auto;
+  text-align: center; }
+
+.directory\.caption a:link,
+.directory\.caption a:visited,
+.directory\.caption a:active,
+
+.directory\.authority a:link,
+.directory\.authority a:visited,
+.directory\.authority a:active
+  { color: #aa0000; text-decoration: none; }
+  
+.directory\.banner,
+.directory\.smallbanner {
+  background-color: #ddddee;
+  color: #444455;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: 250px;
+  margin-top: 20px;
+  text-align: center;
+  width: 800px; }
+  
+.directory\.smallbanner {
+  height: 125px;
+  margin: 0px auto 10px auto;
+  width: 400px; }
+  
+.directory\.icon {
+  float: left;
+  height: 128px;
+  margin: -80px 0px 0px 20px;
+  overflow: auto;
+  position: absolute;
+  width: 128px;
+  word-wrap: break-word; }
+  
+.directory\.icon64 {
+  display: block;
+  height: 64px;
+  margin: 0px auto 10px auto;
+  width: 64px; }
+  
+.directory\.authority {
+  font-size: 11px;
+  margin-bottom: 4px;
+  text-align: center; }
+
+.directory\.label a:link,
+.directory\.label a:visited,
+.directory\.label a:active { color: #ffff00; }
+  
+.directory\.label {
+  color: #ffff00;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px; }
+  
+.directory\.smalllabel a:link,
+.directory\.smalllabel a:visited,
+.directory\.smalllabel a:active { color: #aa0000; }
+  
+.directory\.smalllabel {
+  color: #aa0000;
+  font-size: 14px;
+  margin-bottom: 5px; }
+  
+.directory\.description { margin-right: 200px; }
+.directory\.mdescription { font-size: 12px; font-style: italic; text-align: left; }
+
+.directory\.modified {
+  font-size: 11px;
+  margin-bottom: 10px; }

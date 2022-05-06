@@ -1,0 +1,66 @@
+<!-- **************************************************
+     * Application: EnigmaV                           * 
+     * Author: Johnny L. de Alba                      *
+     * Date: 09/07/2013                               *
+     ************************************************** -->
+	 
+<!doctype html public "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+  
+<html>
+<head>
+
+  <title>variable:document.title</title>
+  variable:document.keywords
+  variable:document.description
+  
+  <meta http-equiv="content-type" content='text/html; charset=utf-8'>
+  <link rel='stylesheet' type='text/css' href='default/style-n.css' />
+
+</head>
+
+<body>
+<div class='background'>
+<div class='container'>
+
+<a href='/'><img src='default/logo.png'
+  style='float: left;' title='Return to the Index Page' alt=''/></a>
+
+<div class='primary_heading'>
+  <a href='/'>Return to Home Page</a> 
+  &nbsp;&nbsp;&nbsp;
+  <a href='view-message.php?id=85'>About EnigmaV</a> 
+</div>
+
+variable:directory.banner
+
+<div class='document'>
+
+  <img src='variable:directory.pattachment' class='directory.icon' alt=''/>
+
+<div class='account_settings'>
+
+class:account_settings.guest
+  <div class='grey_control.right'><a href='register.php'>Register</a></div>
+  <div class='grey_control.left'><a href='login.php'>Login</a></div>
+;class:account_settings.guest
+
+class:account_settings.client
+  <div class='grey_control.right'><a href='login.php?o=logout'>Logout</a></div>
+  <div class='grey_control.left'><a href='account.php?id=variable:client.id'>variable:client.fullname</a></div>
+;class:account_settings.client
+
+  <div class='directory.label'>
+    <a href='view-directory.php?id=variable:directory.id'>
+      variable:directory.label</a>
+  </div>
+  
+  <div class='directory.description'>variable:directory.description</div>
+  
+</div>
+  variable:document.output
+</div>
+</div>
+
+</body>
+</html>

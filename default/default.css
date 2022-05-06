@@ -1,0 +1,141 @@
+/**************************************************
+ * Application: EnigmaV                           *
+ * Author: Johnny L. de Alba                      *
+ * Date: 09/04/2013                               *
+ **************************************************/
+
+ .category {
+  font-size: 12px;
+  margin: 0px 60px 20px 60px;
+  overflow: auto; }
+
+.category\.caption {
+  background-color: #dddddd;
+  border-color: #666666;
+  border-style: solid;
+  border-width: 1px 0px 1px 0px;
+  color: #666666;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 4px; }
+  
+.category\.footer {
+  font-size: 10px;
+  margin: 0px 60px 20px 60px;
+  overflow: auto;
+  text-align: right;
+  text-transform:uppercase; }
+
+.category\.footer a:link,
+.category\.footer a:visited,
+.category\.footer a:active {
+  color: #aa0000; text-decoration: none; }
+  
+.category\.title {
+  border-color: #000000;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  font-weight: bold;
+  padding-bottom: 6px; }
+
+.category\.description {
+  padding-top: 6px; }
+
+.category\.input { 
+  border: 1px solid #bbbbbb;
+  border-radius: 3px;
+  font-family: sans-serif;
+  font-size: 11px;
+  margin: 0px;
+  padding: 2px;
+  width: 240px; }
+  
+.category\.textarea {
+  clear: both; 
+  display: block;
+  margin: 20px auto 0px auto;
+  width: 455px; }
+  
+.category\.highlight,
+.category\.utube  {
+  display: block;
+  margin: 20px auto 20px auto;
+  width: 320px; }
+
+.category\.utube { height: 240px; }
+  
+.sub_category {
+  font-size: 12px;
+  margin: 0px 100px 20px 100px;
+  overflow: auto; }
+
+.sub_category\.title {
+  float: left;
+  font-weight: bold; }
+
+.sub_category\.description {
+  font-size: 10px;
+  font-weight: normal; }
+  
+.sub_category\.field { float: right; }
+
+.sub_category\.center { text-align: center; }
+
+.sub_category\.center a:link,
+.sub_category\.center a:visited,
+.sub_category\.center a:active {
+  color: #aa0000; text-decoration: none; }
+ 
+.window {
+  margin: 20px auto 0px auto;
+  width: 640px; }
+
+.window\.header {
+  background-image: url('wndhead640.png');
+  background-repeat: no-repeat;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 8px 8px 8px 16px; }
+  
+.window\.body {
+  background-color: #eeeeee;
+  color: #444444;
+  overflow: auto;
+  padding-top: 20px; }
+  
+.window\.footer {
+  background-image: url('wndfoot640.png');
+  background-repeat: no-repeat;
+  height: 16px; }
+ 
+.component\.container {
+  background-color: #dddddd;
+  border: 1px solid #bbbbbb;
+  border-radius: 3px;
+  color: #444444;
+  overflow: auto;
+  padding: 10px; }
+  
+.component\.avatar32 {
+  float: left;
+  height: 32px;
+  width: 32px; }
+  
+.component\.fullname {
+  font-weight: bold;
+  margin: 5px 0px 0px 42px; }
+  
+.component\.attachment {
+  display: none;
+  font-size: 10px;
+  margin-bottom: 10px;
+  text-align: right; }
+  
+.contact\.avatar {
+  float: left;
+  height: 64px;
+  width: 64px; }
+  
+.contact\.body {
+  margin: 0px 0px 10px 84px;
+  overflow: auto; }

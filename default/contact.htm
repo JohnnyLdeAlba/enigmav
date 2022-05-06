@@ -1,0 +1,72 @@
+<!-- **************************************************
+     * Application: EnigmaV                           * 
+     * Author: Johnny L. de Alba                      *
+     * Date: 09/14/2013                               *
+     ************************************************** -->
+
+<!doctype html public "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+
+<html>
+<head>
+  <title>variable:document.title</title>
+  <meta http-equiv="content-type" content='text/html; charset=utf-8'>
+  <link rel='stylesheet' type='text/css' href='default/style-n.css' />
+  <link rel='stylesheet' type='text/css' href='default/default.css' />
+</head>
+<body>
+
+<div class='container'>
+
+  <a href='index.php'><img src='default/logo.png'></a>
+
+<div class='window'>
+<div class='window.header'>Contact</div>
+<div class='window.body'>
+
+<div class='category' style='margin-bottom: 10px;'>
+
+  <div class='category.caption'>Account Details</div>
+  
+    <img src='variable:contact.avatar' alt='' class='contact.avatar' />
+	
+  <div class='contact.body'>
+    <div class='sub_category.title'>Username</div>
+    <div class='sub_category.field' style='font-weight: bold'>variable:contact.fullname</div>
+  </div>
+  
+  <div class='contact.body'>
+    <div class='sub_category.title'>Type</div>
+    <div class='sub_category.field'><img src='variable:contact.type' alt='' /></div>
+  </div>
+  
+  <div class='contact.body' style='margin-bottom: 20px;'>
+    <div class='sub_category.title'>Email</div>
+    <div class='sub_category.field'>
+	  <a href='mailto:variable:contact.email' style='color: #aa0000;'>variable:contact.email</a>
+	</div>
+  </div>
+  
+  <div class='contact.body'>
+    <div class='sub_category.title'>Created</div>
+    <div class='sub_category.field'>variable:contact.created</div>
+  </div>
+  
+  <div class='contact.body'>
+    <div class='sub_category.title'>Last Online</div>
+    <div class='sub_category.field'>variable:contact.modified</div>
+  </div>
+  
+</div>
+
+<div class='category.footer'><a href='index.php'>Return to Index</a></div> 
+</div>
+
+<div class='window.footer'>&nbsp;</div>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

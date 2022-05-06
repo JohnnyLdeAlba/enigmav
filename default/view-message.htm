@@ -1,0 +1,151 @@
+<!-- **************************************************
+     * Application: EnigmaV                           * 
+     * Author: Johnny L. de Alba                      *
+     * Date: 09/03/2013                               *
+     ************************************************** -->
+
+<link rel='stylesheet' type='text/css' href='default/view-message.css' />
+
+<div class='divider'>&nbsp;</div>
+
+<div class='message'>
+<div class='message.header'>
+<div style='float: right;'>
+
+class:message.auth
+  <a href='modify-message.php?id=variable:message.id'>
+    Modify</a>&nbsp;&nbsp;
+  <a href='remove-message.php?id=variable:message.id'>
+    Remove</a> &nbsp;|&nbsp;
+;class:message.auth
+
+  <a href='view-message.php?id=variable:message.id'>
+    variable:message.total Comments</a>
+</div>
+  <a href='view-directory.php?id=variable:directory.id'>
+    variable:directory.label</a>
+</div>
+
+<div class='message.caption'>
+<img src='variable:message.avatar' class='message.avatar64' alt='' />
+
+<div class='message.rating'>
+
+  <a href='view-message.php?id=variable:message.id&o=increment&s=variable:s'>
+    <img src='default/white-vote-up.png' title='Up Vote'/></a>
+
+  <div style='margin: 15px 0px 15px 0px;'>
+    variable:message.rating</div>
+  
+  <a href='view-message.php?id=variable:message.id&o=decrement&s=variable:s'>
+    <img src='default/white-vote-down.png' title='Down Vote'/></a>
+	
+</div>
+
+<div class='message.sub_caption'>
+  <div class='message.title'>variable:message.title</div>
+  <div class='message.date'>On variable:message.created</div>
+  <div class='message.author'>By <a href='contact.php?id=variable:message.uid'>variable:message.fullname</a></div>
+</div>
+</div>
+
+<div class='message.body'>
+
+class:message.image
+  <a href='message/variable:message.pattachment'>
+  <img src='message/feature/variable:message.pattachment' class='message.feature' alt='' /></a>
+;class:message.image
+
+class:message.utube
+<div style='text-align: center;'>
+  <object type='application/x-shockwave-flash'
+    data='http://www.youtube.com/v/variable:message.pattachment'
+	class='message.utube'>
+	
+    <param name='movie' value='http://www.youtube.com/v/variable:message.pattachment' />
+    <param name='movie' allowFullScreen='true' />
+    <param name='movie' allowscriptaccess='always' />
+  </object>
+</div>
+;class:message.utube
+
+<br /><br />
+variable:message.data
+</div>
+</div>
+
+class:comment.create
+<div class='component' id='prompt'>
+
+variable:dialog_box
+
+<form id='application' action='view-message.php?id=variable:message.id#prompt'
+  method='post' enctype='multipart/form-data' accept-charset='utf-8'>
+
+  <input name='o' type='hidden' value='create'/>
+  <input name='s' type='hidden' value='variable:s'/>
+  <input name='MAX_FILE_SIZE' type='hidden' value='10000000'/>
+
+<div class='component.container'>
+
+<div style='overflow: auto;'>
+  <img src='variable:client.avatar' class='component.avatar32' alt='' />
+  <div class='component.fullname'>variable:client.fullname</div>
+</div>
+
+  <textarea name='data' rows='8' class='component.textarea'>variable:comment.data</textarea>	
+  <input type='submit' value='Submit Comment' class='white_control.button'/>
+</div>
+
+</form>
+</div>
+;class:comment.create
+
+class:comment
+<div class='divider'>&nbsp;</div>
+
+<div class='comment'>
+  <img src='variable:comment.avatar' class='comment.avatar64' alt='' />
+  
+<div class='comment.body'>
+  <div class='comment.author'>
+    <a href='contact.php?id=variable:comment.uid'>
+	  variable:comment.fullname</a>
+  </div>
+  
+  <div class='comment.date'>variable:comment.created</div>
+
+  variable:comment.data
+</div>
+
+class:comment.auth
+<div class='comment.footer'>&nbsp;
+  <a href='remove-comment.php?id=variable:comment.id'>Remove</a>
+</div>
+;class:comment.auth
+
+</div>
+;class:comment
+
+<div class='divider'>&nbsp;</div>
+<div class='document.footer'>
+
+  <div class='white_control.button'>
+    Page variable:page.current of variable:page.total
+  </div>
+
+  class:page.next
+  <div class='white_control.button'>
+    <a href='view-message.php?id=variable:message.id&p=variable:page.next'>
+	  Next</a>
+  </div>
+  ;class:page.next
+
+  class:page.previous
+  <div class='white_control.button'>
+    <a href='view-message.php?id=variable:message.id&p=variable:page.previous'>
+	  Previous</a>
+  </div>
+  ;class:page.previous
+
+</div>

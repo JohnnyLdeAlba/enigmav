@@ -1,0 +1,166 @@
+<!-- **************************************************
+     * Application: EnigmaV                           * 
+     * Author: Johnny L. de Alba                      *
+     * Date: 09/04/2013                               *
+     ************************************************** -->
+
+<!doctype html public "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+
+<html>
+<head>
+  <title>EnigmaV Network - Modify Message</title>
+  <meta http-equiv="content-type" content='text/html; charset=utf-8'>
+  <link rel='stylesheet' type='text/css' href='default/style-n.css' />
+  <link rel='stylesheet' type='text/css' href='default/default.css' />
+</head>
+<body>
+
+<script type='text/javascript' src='default/enigma.js'></script>
+
+<div class='container'>
+
+  <a href='index.php'><img src='default/logo.png'></a>
+
+<div class='window'>
+  <div class='window.header'>Modify Message</div>
+<div class='window.body'>
+
+<form id='application' action='modify-message.php?id=variable:message.id#prompt'
+  method='post' enctype='multipart/form-data' accept-charset='utf-8'>
+
+  <input name='o' type='hidden' value='modify'/>
+  <input name='s' type='hidden' value='variable:s'/>
+  <input name='MAX_FILE_SIZE' type='hidden' value='10000000'/>
+
+<div class='category' id='prompt'>
+
+  variable:dialog_box
+
+  <img src='variable:client.avatar' class='component.avatar32' alt='' />
+  <div class='component.fullname'>variable:client.fullname</div>
+</div>
+
+class:message.image
+<div class='category'>
+
+  <div class='category.caption'>Attachment</div>
+
+  <div class='sub_category.center'>
+    <img src='message/highlight/variable:message.pattachment' class='category.highlight' alt='' />
+    <a href='modify-message.php?id=variable:message.id&o=remove-attach&s=variable:s'>
+	  Remove Attachment</a>
+  </div>
+  
+</div>
+;class:message.image
+
+class:message.utube
+<div class='category'>
+
+  <div class='category.caption'>Attachment</div>
+  
+  <div class='sub_category.center'>
+  
+    <object type='application/x-shockwave-flash' data='http://www.youtube.com/v/variable:message.pattachment' class='category.utube'>
+      <param name='movie' value='http://www.youtube.com/v/variable:message.pattachment' />
+      <param name='movie' allowFullScreen='true' />
+      <param name='movie' allowscriptaccess='always' />
+    </object>
+
+    <a href='modify-message.php?id=variable:message.id&o=remove-attach&s=variable:s'>
+	  Remove Attachment</a>
+  </div>
+  
+</div>
+;class:message.utube
+
+<div class='category'>
+
+  <div class='category.caption'>Header</div>
+  <div class='category.title'>Title</div>
+  <div class='category.description'>The title field is required and must contain no more than 64 characters.</div>
+</div>
+
+<div class='sub_category'>
+
+  <div class='sub_category.title'>Title</div>
+  <div class='sub_category.field'>
+    <input name='title' type='text' value='variable:message.title' class='category.input'>
+  </div>
+  
+</div>
+
+<div class='category'>
+
+  <div class='category.caption'>Body</div>
+  <div class='category.title'>Message</div>
+  <div class='category.description'>The message field is required and must not be empty.</div>
+  <textarea name='data' rows='8' class='category.textarea'>variable:message.data</textarea>
+  
+</div>
+
+<div class='sub_category'>
+
+  <div class='sub_category.title'>Attributes</div>
+  <div class='sub_category.field'>
+		Hidden <input name='hidden' type='checkbox' value='TRUE' variable:message.hidden /> &nbsp;&nbsp;
+		Locked <input name='locked' type='checkbox' value='TRUE' variable:message.locked />
+  </div>
+  
+</div>
+
+<div class='category'>
+<div class='component.container'>
+
+  <div id='selected_image' class='component.attachment'>
+    <input name='pattachment' type='file' style='position: absolute; visibility: hidden;'>
+    <div style='float: left'>Image</div>
+    <img src='default/16/attachment.png'/> <span id='filename_image'>&nbsp;</span>
+  </div>
+  
+  <div id='selected_video' class='component.attachment'>
+    <div style='float: left'>YouTube</div>
+    <input name='video' type='text' class='textfield' style='width: 300px;'>
+  </div>
+
+  <div class='white_control.button'>
+    <a id='submit' href='#'>
+	  Submit Message</a>
+  </div>
+  
+  <div id='select_attachment'>
+	<div class='white_control.right'>
+	  <a id='select_video' href='#'>
+	    YouTube URL</a>
+	</div>
+	
+	<div class='white_control.left'>
+	  <a id='select_image' href='#'>
+	    Upload Image</a>
+	</div>
+  </div>
+  
+  <div id='remove_attachment' style='display: none;'>
+	<div class='white_control.button'>
+	  <a id='remove_attachment' href='#'>
+	    Remove Attachment</a>
+    </div>
+  </div>
+  
+</div>
+</div>
+
+<script type='text/javascript'> AttachSelect(); </script>
+</form>
+
+<div class='category.footer'><a href='index.php'>Return to Index</a></div> 
+</div>
+
+<div class='window.footer'>&nbsp;</div>
+
+</div>
+</div>
+
+</body>
+</html>

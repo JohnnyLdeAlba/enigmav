@@ -1,0 +1,43 @@
+<!doctype html public "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+
+<html>
+<head>
+
+  <title>variable:document.title</title>
+  variable:document.keywords
+  variable:document.description
+
+  <link rel='stylesheet' type='text/css' href='default/style-n.css' />
+
+</head>
+
+<body>
+<div class='background'>
+
+<div class='container'>
+
+<a href='index.php'><img src='default/logo.png' alt='' /></a>
+variable:directory.banner
+
+<div class='document'>
+
+<div class='account_settings'>
+
+class:account_settings.guest
+  <div class='grey_control.right'><a href='register.php'>Register</a></div>
+  <div class='grey_control.left'><a href='login.php'>Login</a></div>
+;class:account_settings.guest
+
+class:account_settings.client
+  <div class='grey_control.right'><a href='login.php?o=logout'>Logout</a></div>
+  <div class='grey_control.left'><a href='account.php?id=variable:client.id'>variable:client.fullname</a></div>
+;class:account_settings.client
+
+</div>
+  variable:document.output
+</div>
+</div>
+
+</body>
+</html>

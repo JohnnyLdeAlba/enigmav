@@ -1,0 +1,106 @@
+<!-- **************************************************
+     * Application: EnigmaV                           * 
+     * Author: Johnny L. de Alba                      *
+     * Date: 09/08/2013                               *
+     ************************************************** -->
+
+<link rel='stylesheet' type='text/css' href='default/view-directory.css' />
+<div class='divider'>&nbsp;</div>
+
+class:message.create
+<div class='gridlayout'>
+  <div class='white_control.button'>
+    <a href='create-message.php?id=variable:directory.id'>Create Message</a>
+  </div>
+</div>
+;class:message.create
+
+<div class='gridlayout' style='margin-bottom: 0px;'>
+class:nomessage
+  <div class='dialog_component'>No Messages</div>
+;class:nomessage
+
+class:message
+<div class='component' style='float: left; variable:clear'>
+<div class='component.header'>
+  <div style='float: right;'>
+    <a href='view-message.php?id=variable:message.id'>
+	  variable:message.total Comments</a>
+  </div>
+  
+  <a href='view-directory.php?id=variable:message.directory_id'>
+    variable:message.directory_label</a>
+</div>
+
+<div class='component.body'>
+
+class:message.image
+  <a href='message/variable:message.pattachment'>
+  <img src='message/highlight/variable:message.pattachment'
+    class='message.highlight' alt='' /></a>
+;class:message.image
+
+class:message.utube
+<div style='text-align: center;'>
+  <object type='application/x-shockwave-flash' data='http://www.youtube.com/v/variable:message.pattachment' class='message.utube'>
+    <param name='movie' value='http://www.youtube.com/v/variable:message.pattachment' />
+    <param name='movie' allowFullScreen='true' />
+    <param name='movie' allowscriptaccess='always' />
+  </object>
+</div>
+;class:message.utube
+
+<div class='message.rating'>
+  <a href='view-message.php?id=variable:message.id&o=increment&s=variable:s'>
+    <img src='default/grey-vote-up.png' title='Up Vote'/></a>
+
+  <div style='margin: 15px 0px 15px 0px;'>
+    variable:message.rating</div>
+  
+  <a href='view-message.php?id=variable:message.id&o=decrement&s=variable:s'>
+    <img src='default/grey-vote-down.png' title='Down Vote'/></a>
+</div>
+
+<img src='variable:message.avatar' class='message.avatar32' alt='' />
+
+<div class='message.caption'>
+  <div class='message.title'>variable:message.title</div>
+  <div class='message.date'>On variable:message.created</div>
+</div>
+  <div class='message.body'>variable:message.data</div>
+</div>
+
+<div class='component.footer'>
+<div style='float: left;'>
+  <a href='contact.php?id=variable:message.uid'>
+    by variable:message.fullname</a>
+</div>
+  <a href='view-message.php?id=variable:message.id'>read more...</a>
+</div>
+</div>
+;class:message
+</div>
+
+<div class='divider'>&nbsp;</div>
+<div class='document.footer'>
+
+  <div class='white_control.button'>
+    Page variable:page.current of variable:page.total
+  </div>
+
+  class:page.next
+  <div class='white_control.button'>
+    <a href='view-directory.php?id=variable:directory.id&p=variable:page.next'>
+	  Next</a>
+  </div>
+  ;class:page.next
+
+  class:page.previous
+  <div class='white_control.button'>
+    <a href='view-directory.php?id=variable:directory.id&p=variable:page.previous'>
+	  Previous</a>
+  </div>
+  ;class:page.previous
+
+</div>
+

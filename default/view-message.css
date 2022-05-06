@@ -1,0 +1,118 @@
+/**************************************************
+ * Application: EnigmaV                           *
+ * Author: Johnny L. de Alba                      *
+ * Date: 09/04/2013                               *
+ **************************************************/
+
+.component { margin: 40px auto 40px auto; width: 580px; }
+
+.component\.container {
+  background-color: #dddddd;
+  border: 1px solid #bbbbbb;
+  border-radius: 3px;
+  color: #444444;
+  overflow: auto;
+  padding: 10px; }
+  
+.component\.avatar32 {
+  float: left;
+  height: 32px;
+  width: 32px; }
+  
+.component\.fullname {
+  font-weight: bold;
+  margin: 5px 0px 0px 42px; }
+  
+.component\.textarea {
+  display: block;
+  margin: 10px auto 10px auto;
+  width: 550px; }
+
+.message {
+	margin: 0px auto 0px auto;
+	width: 640px;
+	overflow: auto; }
+  
+.message\.header{
+  font-size: 12px;
+  letter-spacing: 2px;
+  overflow: auto;
+  margin-bottom: 15px;
+  text-transform:uppercase; }
+ 
+ .message\.caption {
+  margin-bottom: 15px;
+  overflow: auto;
+  word-wrap: break-word; }
+ 
+.message\.sub_caption {
+  margin: 0px 30px 0px 74px;
+  overflow: auto;
+  word-wrap: break-word; }
+ 
+.message\.body {
+  overflow: auto;
+  word-wrap: break-word; }
+ 
+.message\.feature,
+.message\.utube  {
+  margin: 0px auto 15px auto;
+  width: 640px; }
+
+.message\.utube { height: 480px; }
+
+.message\.avatar64 {
+  float: left;
+  height: 64px;
+  width: 64px; }
+  
+.message\.rating {
+  float: right;
+  font-weight: bold;
+  margin-top: 4px;
+  text-align: center;
+  width: 32px;
+  height: 64px;
+ }
+
+.message\.title {
+  color: #ffff00;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px; }
+  
+.message\.author, .message\.date { font-size: 11px; }
+.message\.date { margin-bottom: 4px; }
+
+.comment {
+	margin: 0px auto 20px auto;
+	width: 640px;
+	overflow: auto; }
+  
+.comment\.body {
+  overflow: auto;
+  margin: 0px 30px 20px 74px;
+  word-wrap: break-word; }
+
+.comment\.footer {
+  font-size: 12px;
+  letter-spacing: 2px;
+  overflow: auto;
+  text-align: right;
+  text-transform:uppercase; }
+
+.comment\.avatar64 {
+  float: left;
+  height: 64px;
+  width: 64px; }
+
+.comment\.author { font-size: 14px; margin-bottom: 4px; }
+.comment\.red_author { color: #aa0000; font-size: 14px; margin-bottom: 4px; }
+  
+.comment\.red_author a:link,
+.comment\.red_author a:visited,
+.comment\.red_author a:active { color: #aa0000; }
+
+.comment\.date {
+  font-size: 11px;
+  margin-bottom: 10px; }

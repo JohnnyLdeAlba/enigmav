@@ -1,0 +1,70 @@
+<!-- **************************************************
+     * Application: EnigmaV                           * 
+     * Author: Johnny L. de Alba                      *
+     * Date: 09/14/2013                               *
+     ************************************************** -->
+
+<!doctype html public "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+
+<html>
+<head>
+  <title>variable:document.title</title>
+  <meta http-equiv="content-type" content='text/html; charset=utf-8'>
+  <link rel='stylesheet' type='text/css' href='default/style-n.css' />
+  <link rel='stylesheet' type='text/css' href='default/default.css' />
+</head>
+<body>
+
+<div class='container'>
+
+  <a href='index.php'><img src='default/logo.png'></a>
+
+<div class='window'>
+<div class='window.header'>Welcome, Please Login</div>
+<div class='window.body'>
+
+<form action='login.php' method='post' enctype='multipart/form-data' accept-charset='utf-8'>
+  <input name='o' type='hidden' value='login' />
+  <input name='s' type='hidden' value='variable:s' />
+
+<div class='category'>
+
+  variable:dialog_box
+
+  <div class='sub_category.title'>Email</div>
+  <div class='sub_category.field'>
+    <input name='email' type='text' class='category.input'>
+  </div>
+</div>
+
+<div class='category'>
+  <div class='sub_category.title'>Password</div>
+  <div class='sub_category.field'>
+    <input name='password' type='password' class='category.input'>
+  </div>
+</div>
+
+<div class='category'>
+  <div class='sub_category.title' style='font-weight: normal;'>
+    <input id='persistent' name='persistent' type='checkbox' value='TRUE'/>
+    &nbsp;<label for='persistent'>Stay logged in</label>
+  </div>
+  
+  <input type='submit' value='Login' class='white_control.button' />
+</div>
+
+<div class='category.footer'>
+  <a href='register.php'>Register for an account</a> &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href='recover-password.php'>Recover password</a>
+</div> 
+
+</form>
+</div>
+
+<div class='window.footer'>&nbsp;</div>
+</div>
+</div>
+
+</body>
+</html>
