@@ -1,7 +1,7 @@
 # Enigma V
 A prototype social network created in 2012 that uses PHP5 and MySQL. 
 
-<img style="height: 400px;" src="https://raw.githubusercontent.com/JohnnyLdeAlba/enigmav/master/enigmav-front.png" /> <img style="height: 400px;" src="https://raw.githubusercontent.com/JohnnyLdeAlba/enigmav/master/enigmav-edit-profile.png" />
+<img style="height: 400px;" src="https://raw.githubusercontent.com/JohnnyLdeAlba/enigmav/master/enigmav-landing.png" /> <img style="height: 400px;" src="https://raw.githubusercontent.com/JohnnyLdeAlba/enigmav/master/enigmav-edit.png" />
 
 # Features
 
