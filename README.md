@@ -10,6 +10,10 @@ A prototype social network created in 2012 that uses PHP5 and MySQL.
 - Users can up and down vote their favorite content.
 - Directories can be added to organize content into categories.
 
+# [Example](https://enigmav.nexusultima.com)
+
+This is the hosted version of this repo with profile creation and media uploading disabled.
+
 # Requirements
 
 - PHP 5.6
