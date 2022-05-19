@@ -40,7 +40,7 @@ sudo apt install php5.6 php5.6-mysql
 sudo apt install libapache2-mod-php
 ```
 
-Once PHP is installed you'll need to enable it in Apache2. The below commands disable PHP7.4 (The latest version as of this writing), and enables PHP5.6.
+Once PHP is installed you'll need to enable it in Apache2. The below commands disable PHP7.4 and enables PHP5.6 (The latest version of PHP is enabled by default).
 After that we need to restart Apache.
 
 ```bash
@@ -54,6 +54,30 @@ apache2ctl restart
 ```bash
 sudo apt install mariadb-server
 sudo mysql_secure_installation
+```
+
+```
+sudo mysql
+```
+
+```mysql
+CREATE USER 'username'@'localhost' identified by 'username';
+```
+
+```mysql
+GRANT ALL PRIVILEGES on * TO 'username'@'localhost';
+```
+
+```mysql
+CREATE DATABASE DATABASE_NAME;
+```
+
+```bash
+sudo mysql -uusername -p database_name < database.sql
+```
+
+```bash
+sudo mysqldump --databases database_name > database.sql
 ```
 
 # Known Issues
