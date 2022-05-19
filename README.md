@@ -76,3 +76,4 @@ sudo mysqldump --databases database_name > database.sql
 # Known Issues
 
 - Recover password by email does not currently work and needs to be updated.
+- Youtube links do not show up when attached due to using obsolete embed code.
