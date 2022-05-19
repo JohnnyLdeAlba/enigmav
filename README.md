@@ -1,7 +1,17 @@
 # Enigma V
 A prototype social network created in 2013 that uses PHP5 and MySQL. 
 
+# Features
+
+- Create an account with an avatar or profile picture.
+- Post messages with image or video preview.
+- Users can up and down vote their favorite content.
+- Directories can be added to organize content into categories.
+
 # Requirements
+
+- PHP 5.6
+- MySQL (or MariaDB)
 
 # Installing PHP5.6 on Debian
 
@@ -46,3 +56,6 @@ sudo apt install mariadb-server
 sudo mysql_secure_installation
 ```
 
+# Known Issues
+
+- Recover password by email does not currently work and needs to be updated.
