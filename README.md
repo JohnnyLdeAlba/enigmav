@@ -1,5 +1,5 @@
 # Enigma V
-A prototype social network created in 2013 that uses PHP5 and MySQL. 
+A prototype social network created in 2012 that uses PHP5 and MySQL. 
 
 # Features
 
