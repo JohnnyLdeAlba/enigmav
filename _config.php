@@ -6,9 +6,9 @@ $NetworkDomain = 'website.com';
 
 $MySqlPrefix = 'enigmav_';
 $MySqlHost = 'localhost';
-$MySqlUsername = 'nexus';
-$MySqlPassword = 'nexus';
-$MySqlDatabase = 'nexus';
+$MySqlUsername = 'username';
+$MySqlPassword = 'password';
+$MySqlDatabase = 'database';
 
 $TemplateTheme = 'default/';
 
