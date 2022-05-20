@@ -27,8 +27,32 @@ This is a live version of the repo.
 # Setting Up config.php
 
 The first thing you want to do is rename the file _config.php that was included in this repo to config.php. 
-Next open the file with a text editor where you'll see the variables below.
+Next open the file with a text editor where you'll see the variables below:
 
+- `$NetworkName` Name of the Website Enigma V will be running on.
+- `$NetworkUrl` URL of your website.
+- `$NetworkDomain` Domain of your website.
+
+- `$MySqlHost` Host the MySQL (or MariaDB) server is located on.
+- `$MySqlUsername` Username used to access the database.
+- `$MySqlPassword` Password associated with the above username.
+- `$MySqlDatabase` The name of the database.
+
+You will need to enter the above credentials before you'll be able proceed with database installation.
+
+```bash
+sudo mysql -uusername -p database_name < database.sql
+```
+
+The command above installs `database.sql` (included with Enigma V's repository)
+into your newly created database. Be sure to replace username with your
+username, for example if your username is root then you need to type in
+-uroot. Also be sure to replace database_name with the name of your database.
+
+# Installing database.sql
+
+A file called database.sql was included in this repo that includes the initial setup needed
+to get Enigma V operating. Below is the command to do this:
 
 # Installing PHP5.6 on Debian
 
