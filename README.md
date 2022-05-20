@@ -12,7 +12,7 @@ A prototype social network created in 2012 that uses PHP 5 and MySQL.
 
 # [Example](https://enigmav.nexusultima.com)
 
-This is the hosted version of this repo with profile creation and media uploading disabled.
+This is a live version of the repo.
 
 # Requirements
 
