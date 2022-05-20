@@ -21,7 +21,7 @@ This is a live version of the repo.
 
 # Known Issues
 
-- Recover password by email does not currently work and needs to be updated.
+- Recovering passwords by email no longer works and needs to be updated.
 - Youtube links do not show up when attached due to using obsolete embed code.
 
 # Installing Enigma V
