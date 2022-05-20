@@ -26,6 +26,11 @@ This is a live version of the repo.
 
 # Installing Enigma V
 
+Getting Enigma V working is a simple easy process, the only issue is getting PHP 5.6 installed
+as well as ImageMaick as most repositories do not support, or properly support them. If you're
+using Debian, there are instructions included in this text on how to get those pieces of software
+running.
+
 ## Setting Up config.php
 
 The first thing you want to do is rename the file _config.php that was included in this repo to config.php. 
