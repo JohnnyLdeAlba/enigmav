@@ -19,6 +19,11 @@ This is the hosted version of this repo with profile creation and media uploadin
 - PHP 5.6
 - MySQL (or MariaDB)
 
+# Known Issues
+
+- Recover password by email does not currently work and needs to be updated.
+- Youtube links do not show up when attached due to using obsolete embed code.
+
 # Installing PHP5.6 on Debian
 
 Because PHP5.6 is no longer supported by the main repository, you'll need an alternate reposititory that supports it.
@@ -78,8 +83,3 @@ sudo mysql -uusername -p database_name < database.sql
 ```bash
 sudo mysqldump --databases database_name > database.sql
 ```
-
-# Known Issues
-
-- Recover password by email does not currently work and needs to be updated.
-- Youtube links do not show up when attached due to using obsolete embed code.
