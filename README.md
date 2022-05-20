@@ -37,14 +37,14 @@ sh -c 'echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://pa
 apt-get update
 ```
 
-Next you'll need to install PHP5.6 and all the additional dependancies needed for EnigmaV to run.
+Next you'll need to install PHP 5.6 and all the additional dependancies needed for EnigmaV to run.
 
 ```bash
 sudo apt install php5.6 php5.6-mysql
 sudo apt install libapache2-mod-php
 ```
 
-Once PHP is installed you'll need to enable it in Apache2. The below commands disable PHP7.4 and enables PHP5.6 (The latest version of PHP is enabled by default).
+Once PHP is installed you'll need to enable it in Apache 2. The below commands disable PHP7.4 and enables PHP5.6 (The latest version of PHP is enabled by default).
 After that we need to restart Apache.
 
 ```bash
@@ -55,30 +55,52 @@ apache2ctl restart
 
 # Installing MariaDB (MySQL) Server
 
+MariaDB is the successor of MySQL and works well with Enigma V. Below are instructions on how to install it in Debian.
+
 ```bash
 sudo apt install mariadb-server
 sudo mysql_secure_installation
 ```
 
+Next you'll want to bring up the MySQL prompt.
+
 ```
 sudo mysql
 ```
+
+We need to create a user for out database, below is the command just be sure to replace
+username with your desired username.
 
 ```mysql
 CREATE USER 'username'@'localhost' identified by 'username';
 ```
 
+The next step is optional, here we are granting our newly created user all privileges. 
+This could be dangerous on a public server. As with the previous step, replace username
+with the your username.
+
 ```mysql
 GRANT ALL PRIVILEGES on * TO 'username'@'localhost';
 ```
+
+Now to create the database, replace DATABASE_NAME with the name
+of your database.
 
 ```mysql
 CREATE DATABASE DATABASE_NAME;
 ```
 
+This command installs the database included with Enigma V's repository
+into your newly created database. Be sure to replace username with your
+username, for example if your username is root then you need to type in
+-uroot. Also be sure to replace database_name with the name of your database.
+
 ```bash
 sudo mysql -uusername -p database_name < database.sql
 ```
+
+Below is the command for backing up your database, remember
+to replace database_name with your database.
 
 ```bash
 sudo mysqldump --databases database_name > database.sql
