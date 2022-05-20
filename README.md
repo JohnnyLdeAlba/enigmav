@@ -24,6 +24,12 @@ This is a live version of the repo.
 - Recover password by email does not currently work and needs to be updated.
 - Youtube links do not show up when attached due to using obsolete embed code.
 
+# Setting Up config.php
+
+The first thing you want to do is rename the file _config.php that was included in this repo to config.php. 
+Next open the file with a text editor where you'll see the variables below.
+
+
 # Installing PHP5.6 on Debian
 
 Because PHP5.6 is no longer supported by the main repository, you'll need an alternate reposititory that supports it.
