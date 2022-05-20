@@ -33,7 +33,7 @@ running.
 
 ## Setting Up config.php
 
-The first thing you want to do is rename the file _config.php that was included in this repo to config.php. 
+The first thing you'll want to do is rename the file _config.php that was included in this repo to config.php. 
 Next open the file with a text editor where you'll see the variables below:
 
 - `$NetworkName` Name of the Website Enigma V will be running on.
