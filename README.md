@@ -24,7 +24,9 @@ This is a live version of the repo.
 - Recover password by email does not currently work and needs to be updated.
 - Youtube links do not show up when attached due to using obsolete embed code.
 
-# Setting Up config.php
+# Installing Enigma V
+
+### Setting Up config.php
 
 The first thing you want to do is rename the file _config.php that was included in this repo to config.php. 
 Next open the file with a text editor where you'll see the variables below:
@@ -49,7 +51,7 @@ into your newly created database. Be sure to replace username with your
 username, for example if your username is root then you need to type in
 -uroot. Also be sure to replace database_name with the name of your database.
 
-# Installing database.sql
+### Installing database.sql
 
 A file called database.sql was included in this repo that includes the initial setup needed
 to get Enigma V operating. Below is the command to do this:
