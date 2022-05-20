@@ -5,10 +5,10 @@ A prototype social network created in 2012 that uses PHP 5 and MySQL.
 
 # Features
 
-- Create an account with an avatar or profile picture.
-- Post messages with image or video preview.
+- Create an account with an avatar/profile picture.
+- Post messages with an image or video preview.
 - Users can up and down vote their favorite content.
-- Directories can be added to organize content into categories.
+- Add Directories to organize content into categories.
 
 # [Example](https://enigmav.nexusultima.com)
 
@@ -22,7 +22,7 @@ This is a live version of the repo.
 # Known Issues
 
 - Recovering passwords by email no longer works and needs to be updated.
-- Youtube links do not show up when attached due to using obsolete embed code.
+- Youtube links do not show up when attached to messages due to using obsolete embed code.
 
 # Installing Enigma V
 
@@ -33,33 +33,32 @@ running.
 
 ## Setting Up config.php
 
-The first thing you'll want to do is rename the file _config.php that was included in this repo to config.php. 
-Next open the file with a text editor where you'll see the variables below:
+You're going to need to edit config.php in order for Enigma V to connect to the database.
+The first thing you'll want to do is rename the file _config.php (included in this repo) to config.php. 
+Next open the file with a text editor and edit the variables below:
 
 - `$NetworkName` Name of the Website Enigma V will be running on.
 - `$NetworkUrl` URL of your website.
 - `$NetworkDomain` Domain of your website.
 
-- `$MySqlHost` Host the MySQL (or MariaDB) server is located on.
+- `$MySqlHost` Host where the MySQL (or MariaDB) database is located.
 - `$MySqlUsername` Username used to access the database.
 - `$MySqlPassword` Password associated with the above username.
 - `$MySqlDatabase` The name of the database.
 
-You will need to enter the above credentials before you'll be able proceed with database installation.
-
 ## Installing database.sql
 
-A file called database.sql was included in this repo that includes the initial setup needed
+A file called database.sql was included in this repo that provides the initial setup needed
 to get Enigma V operating. Below is the command to do this:
 
 ```bash
 sudo mysql -uusername -p database_name < database.sql
 ```
 
-The command above installs `database.sql` (included with Enigma V's repository)
+The command above installs `database.sql` (included in this repository)
 into your newly created database. Be sure to replace username with your
-username, for example if your username is root then you need to type in
--uroot. Also be sure to replace database_name with the name of your database.
+username, for example if your username is `root` then you will need to type in
+`-uroot`. You will also need to replace database_name with the name of your database.
 
 # Installing PHP5.6 on Debian
 
@@ -74,7 +73,7 @@ sh -c 'echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://pa
 apt-get update
 ```
 
-Next you'll need to install PHP 5.6 and all the additional dependancies needed for EnigmaV to run.
+Next you'll need to install PHP 5.6 and all the additional dependancies needed for Enigma V to run.
 
 ```bash
 sudo apt install php5.6 php5.6-mysql
@@ -82,7 +81,7 @@ sudo apt install libapache2-mod-php
 ```
 
 Once PHP is installed you'll need to enable it in Apache 2. The below commands disable PHP7.4 and enables PHP5.6 (The latest version of PHP is enabled by default).
-After that we need to restart Apache.
+After that you will need to restart Apache.
 
 ```bash
 sudo a2dismod php7.4
@@ -92,7 +91,7 @@ apache2ctl restart
 
 # Installing MariaDB (MySQL) Server
 
-MariaDB is the successor of MySQL and works well with Enigma V. Below are instructions on how to install it in Debian.
+MariaDB is the successor of MySQL and works great with Enigma V. Below are instructions on how to install it on Debian.
 
 ```bash
 sudo apt install mariadb-server
@@ -105,7 +104,7 @@ Next you'll want to bring up the MySQL prompt.
 sudo mysql
 ```
 
-We need to create a user for out database, below is the command just be sure to replace
+We need to create a user for our database, below is the command to do so. Just be sure to replace
 username with your desired username.
 
 ```mysql
@@ -114,7 +113,7 @@ CREATE USER 'username'@'localhost' identified by 'username';
 
 The next step is optional, here we are granting our newly created user all privileges. 
 This could be dangerous on a public server. As with the previous step, replace username
-with the your username.
+with your username.
 
 ```mysql
 GRANT ALL PRIVILEGES on * TO 'username'@'localhost';
@@ -127,10 +126,10 @@ of your database.
 CREATE DATABASE DATABASE_NAME;
 ```
 
-This command installs the database included with Enigma V's repository
+The following command installs the database file included in this repository
 into your newly created database. Be sure to replace username with your
-username, for example if your username is root then you need to type in
--uroot. Also be sure to replace database_name with the name of your database.
+username, for example if your username is `root` then you need to type in
+`-uroot`. Also be sure to replace database_name with the name of your database.
 
 ```bash
 sudo mysql -uusername -p database_name < database.sql
